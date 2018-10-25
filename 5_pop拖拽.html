@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+ <head>
+	<meta charset="UTF-8">
+	<title>在当前显示区范围内实现点不到的小方块</title>
+	<style>
+		div{
+			position:fixed;
+			width:100px;
+			height:100px;
+			background-image:url(images/xiaoxin.gif);
+      		background-size:100%;
+		}
+	</style>
+	
+ </head>
+ <body>
+	<div id="pop"></div>
+	<script>
+		var canMove=false;
+		pop.onmousedown=function(e){
+			canMove=true;
+			offsetX= e.offsetX;
+			offsetY= e.offsetY;
+
+		}
+		window.onmousemove=function(e){
+			if(canMove){
+				var top= e.clientY-offsetY;
+				var left= e.clientX-offsetX;
+				pop.style.top=top+"px";
+				pop.style.left=left+"px";
+
+			}
+		}
+		pop.onmouseup=function(){
+			canMove=false;
+		}
+	</script>
+ </body>
+</html>
