@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+    font-family: 'Roboto', sans-serif ;
+    font-size: 16px;
+    color: #fffadd;
+    letter-spacing: 1px;
+    display: block;
+    /*background:url(../images/register/bog-03.jpg) top left  no-repeat;*/
+    background:#FFE4E1;
+    background-size: cover;
+
+}
+a{
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    display: block;
+}
+
+.container{
+    width:550px;
+    height: 400px;
+    background: linear-gradient(rgba(10, 10, 10, 0.27),rgba(10, 10, 10, 0.27));
+    background-size: contain;
+    margin: auto;
+    box-shadow: rgba(16, 16, 16, 0.57) -2px 4px 10px 1px;
+    font-weight: 400;
+    /*border: 2px solid rgba(35, 35, 35, 0.76);*/
+    border-radius: .5em;
+}
+.container ul{
+    list-style: none;
+    margin: 10px;
+}
+.container ul li{
+    width: 450px;
+    height: 30px;
+    margin: 2px;
+}
+.container ul li:nth-child(5){
+    border: #f0f8ff;
+    display: inline-block;
+    font-size: 13px;
+    color: #fff;
+}
+.container ul li:nth-child(5) input{
+    width: 17px;
+    height: 17px;
+    border: 1px solid #979797;
+    background-color:transparent;
+    margin-right: 8px;
+}
+.h2{
+    width: 500px;
+    height: 80px;
+    margin:5% auto 10px;
+    padding-left: 13%;
+}
+
+h2,h1 {
+    padding: 10px;
+    font-size: 32px;
+    text-align: left;
+    color: #fff;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+h1{
+    font-size: 40px;
+    color: #980217;
+}
+input::-webkit-input-placeholder {
+    /* placeholder颜色  */
+    color: #949494;
+    /* placeholder字体大小  */
+    font-size: 15px;
+    /* placeholder位置  */
+    text-indent: 8px;
+}
+/*input:-webkit-autofill {*/
+    /*-webkit-box-shadow: 0 0 0px 1000px rgba(238, 238, 238, 0) inset;*/
+/*}*/
+#uname,#upwd{
+    width: 400px;
+    height: 28px;
+    text-indent: 2px;
+    border:none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color:transparent;
+    font-size: 16px;
+    color: #fff;
+}
+#login{
+    width:40%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 100;
+    background: transparent;
+    border: 1px solid #eee;
+    color: #ffffff;
+}
+ footer p{
+     font-size: 10px;
+     display: block;
+     text-align: center;
+     margin: 15px auto 0;
+     color: #eeeeee;
+ }
