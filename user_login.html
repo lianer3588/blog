@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>美少女变身</title>
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+<div class="h2">
+    <h1>美少女专属界面</h1>
+    <a href="#"><img src="images/banana/icon.png" alt="" id="logo-3"/></a>
+</div>
+<div class="container">
+    <form method="post" action="/user/login">
+        <h2>登录</h2>
+        <ul>
+            <li>
+                <input type="text" name="uname" id="uname" placeholder="用户名" onblur="showErr1()"/>
+            </li>
+            <li id="unameMsg"></li>
+            <li>
+                <input type="password" name="upwd" id="upwd" placeholder="密码" onblur="showErr2()"/>
+            </li>
+            <li  id="upwdMsg"></li>
+            <li>
+                <input type="checkbox"/><span>自动登录</span>
+            </li>
+            <li>
+                <input type="submit"  value="登录" onclick="login()" id="login"/>
+            </li>
+            <li></li>
+            <li>
+                <a href="#">忘记密码?</a>
+            </li>
+        </ul>
+    </form>
+</div>
+<footer>
+    <p>©若你喜欢怪人,其实我很可爱</p>
+</footer>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    function login(){
+        //创建异步xhr
+        var xhr=createXhr();
+        //监听
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4&&xhr.status==200){
+                var result=xhr.responseText;
+                alert(result);
+            }
+        }
+        //打开连接
+        xhr.open("post","/user/login",true);
+        //增加,设置post方法请求时的消息头
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+        var u_name=$("uname").value;
+        var u_pwd=$("upwd").value;
+        //发送请求
+        var msg="uname="+u_name+"&upwd="+u_pwd;
+        xhr.send(msg);
+    }
+    function showErr1(){
+        //获取用户框的值
+        var uname=$("uname").value;
+        if(uname==""){
+            $("unameMsg").innerHTML="用户名不能为空!";
+            $("unameMsg").style.color="red";
+        }else{
+            $("unameMsg").innerHTML="验证通过";
+            $("unameMsg").style.color="green";
+        }
+    }
+    function showErr2(){
+        //获取用户框的值
+        var upwd=$("upwd").value;
+        if(upwd==""){
+            $("upwdMsg").innerHTML="密码不能为空!";
+            $("upwdMsg").style.color="red";
+        }else{
+            $("upwdMsg").innerHTML="验证通过";
+            $("upwdMsg").style.color="green";
+        }
+    }
+</script>
+</html>
