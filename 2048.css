@@ -1,0 +1,103 @@
+#gridPanel{
+    width: 480px;height: 480px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #b2dcb7;
+}
+div>div{
+    width: 100px;height: 100px;
+    border-radius: 6px; background: #c3ffc8;
+    float: left;margin-top: 16px;margin-left: 16px;
+    color: white;font-size: 60px;text-align: center;
+    line-height: 100px;
+}
+.n2{
+    background-color: #88db75;
+}
+.n4{
+    background-color: #55c377;
+}
+.n8{
+    background-color: #a0f644;
+}
+.n16{
+    background-color: #29c2a3;
+}
+.n32{
+    background-color: #b5df3f;
+}
+.n64{
+    background-color: #b4eb5b;
+}
+.n128{
+    background-color: #04e083;
+}
+.n256{
+    background-color: #c6ffd2;
+}
+.n512{
+    background-color: #22dae5;
+}
+.n1024{
+    background-color: #99c988;
+}
+.n2048{
+     background-color:green;
+}
+.n4096{
+      background-color: #ff1318;
+  }
+.n2,.n4{
+    color: #1e201b;
+}
+.n1024,.n2048,.n4096{
+    font-size: 40px;
+}
+p{
+    width: 480px;
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 15px;
+    color: red;
+}
+#scoreNum{
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 15px;
+    color: red;
+}
+#gameOver{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    background: rgba(5,5,5,.5);
+    display: none;
+}
+#gameOver p{
+    width: 500px;
+    height: 300px;
+    background: white;
+    position: absolute;
+    /*top: 0;left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*margin: auto;*/
+    top: 50%;
+    left: 50%;
+    margin-top:-150px;
+    margin-left: -250px;
+    text-align: center;
+    line-height: 1.5em;
+    border-radius: 10px;
+    border: 1px solid saddlebrown;
+
+}
+#gameOver a{
+    padding: 10px ;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
